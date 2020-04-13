@@ -19,3 +19,5 @@ COPY ./actions /app/actions
 # By best practices, don't run the code with root user
 USER 1001
 # docker build -t custom-actions:staging .
+# docker tag custom-actions:staging 360773397712.dkr.ecr.ap-southeast-1.amazonaws.com/custom-actions:latest
+# docker push 360773397712.dkr.ecr.ap-southeast-1.amazonaws.com/custom-actions:latest
