@@ -9,13 +9,10 @@ import requests
 class ActionHelloWorld(Action):
     def name(self) -> Text:
         return "action_hello_world"
-
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message("Hello World!")
-
+            dispatcher.utter_message("Hello World!")
         return []
 
 
@@ -28,3 +25,10 @@ class FetchProfileAction(Action):
         url = "http://myprofileurl.com"
         data = requests.get(url).json
         return [SlotSet("account_type", data["account_type"])]
+
+class SetScoreForFeelingAction(Action):
+    def name(self):
+        return "set_score_feeling"
+
+    def run(self, dispatcher, tracker, domain):
+        return true
