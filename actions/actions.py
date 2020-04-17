@@ -20,8 +20,7 @@ class SetAINameAction(Action):
         return "set_ai_name"
 
     def run(self, dispatcher, tracker, domain):
-        SlotSet("ai_name", "Tu prima")
-        return []
+        return [SlotSet("ai_name", "Tu prima")]
 
 
 class SetLatestScoreForFeelingAction(Action):
