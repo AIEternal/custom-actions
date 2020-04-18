@@ -8,7 +8,7 @@ import requests
 
 class FetchProfileAction(Action):
     def name(self):
-        return "fetch_profile"
+        return "action_fetch_profile"
 
     def run(self, dispatcher, tracker, domain):
         url = "http://myprofileurl.com"
@@ -17,7 +17,7 @@ class FetchProfileAction(Action):
 
 class SetAINameAction(Action):
     def name(self):
-        return "set_ai_name"
+        return "action_set_ai_name"
 
     def run(self, dispatcher, tracker, domain):
         return [SlotSet("ai_name", "Tu prima")]
@@ -25,7 +25,7 @@ class SetAINameAction(Action):
 
 class SetLatestScoreForFeelingAction(Action):
     def name(self):
-        return "set_latest_score"
+        return "action_set_latest_score_feeling"
 
 
     def run(self, dispatcher, tracker, domain):
@@ -34,7 +34,7 @@ class SetLatestScoreForFeelingAction(Action):
 
 class SetScoreForFeelingAction(Action):
     def name(self):
-        return "set_score_feeling"
+        return "action_set_score_feeling"
 
     def run(self, dispatcher, tracker, domain):
         # Save last score detected in DB
